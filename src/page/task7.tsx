@@ -23,7 +23,7 @@ function Task7() {
    useEffect(()=>{ 
       if(input.search !== ''){
       const result = async () => {
-         let response:any = await ajax(`https://sql-basedata.herokuapp.com/api/allCountry/${input.search}`)
+         let response:any = await ajax(`https://myapppliswork.herokuapp.com/api/allCountry/${input.search}`)
          fetchLoad({data: response})
       }
       result()

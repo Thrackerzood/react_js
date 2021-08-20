@@ -14,7 +14,7 @@ interface IResponse{
 function Task1():JSX.Element {
    const [state, fetchLoad]:[IState,Dispatch<SetStateAction<IState>>] = useState({data: {message: [{name_country: ""}]}})
    const result = async () => {
-     let response:IResponse = await ajax('https://sql-basedata.herokuapp.com/api/allCity')
+     let response:IResponse = await ajax('https://myapppliswork.herokuapp.com/api/allCity')
      fetchLoad({data: response})
    }
    useEffect(()=>{ result() }, [])
