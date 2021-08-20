@@ -60,7 +60,7 @@ function CitySearchMap(props:{props:IResponse}):JSX.Element {
    }, [props.props.data, currentPage])
    
    const {isLoaded, loadError} = useLoadScript({
-      googleMapsApiKey: '',
+      googleMapsApiKey: 'AIzaSyBdc0x4iD0GPspP6dSvw37ZadVsMKg8k8o',
       libraries: ['places'],
 
    })
