@@ -7,12 +7,14 @@ import { MainS } from "../style/style";
 interface IState{
    data: {message: [{name_country: string}]}
 }
-
+interface IResponse{
+   message: [{name_country: string}]
+}
 
 function Task1():JSX.Element {
    const [state, fetchLoad]:[IState,Dispatch<SetStateAction<IState>>] = useState({data: {message: [{name_country: ""}]}})
    const result = async () => {
-     let response:any = await ajax('https://objective-curie-63caa8.netlify.app/api/allCity')
+     let response:IResponse = await ajax('https://sql-basedata.herokuapp.com/api/allCity')
      fetchLoad({data: response})
    }
    useEffect(()=>{ result() }, [])
