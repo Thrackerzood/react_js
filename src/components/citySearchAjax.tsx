@@ -29,7 +29,7 @@ function CitySearchAjax(props:{props:IResponse}):JSX.Element {
    const previewPage = ():void =>{
       if(currentPage <= 1){
          setCurrentPage(previous => previous = 1)
-      
+
       }else{
          setCurrentPage(previous => previous - 1)
       }
@@ -63,7 +63,7 @@ function CitySearchAjax(props:{props:IResponse}):JSX.Element {
       }
       result()
    }, [props.props.data, currentPage])
-   
+
 
 
 return (<ul>
@@ -83,5 +83,5 @@ return (<ul>
          </ul>
       )
  }
- 
- export default CitySearchAjax;
+
+ export default CitySearchAjax; 

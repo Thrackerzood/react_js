@@ -29,7 +29,7 @@ function CitySearch(props:{props:IResponse}):JSX.Element {
    const previewPage = ():void =>{
       if(currentPage <= 1){
          setCurrentPage(previous => previous = 1)
-      
+
       }else{
          setCurrentPage(previous => previous - 1)
       }
@@ -50,14 +50,14 @@ function CitySearch(props:{props:IResponse}):JSX.Element {
 
 
 
-         
-      
+
+
 
 
    useEffect(() => {
       fetchLoad({data: props.props.data})
    }, [props.props.data])
-   
+
 
 
 return (<ul>
@@ -77,5 +77,5 @@ return (<ul>
          </ul>
       )
  }
- 
+
  export default CitySearch;

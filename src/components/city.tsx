@@ -18,9 +18,9 @@ function City(props:{props: string}):JSX.Element {
            return <CityS key={index}>
                      <p>{element.name_city}</p>
                   </CityS>
-                  
+
         })} 
    </ul>);
  }
- 
- export default City;
+
+ export default City; 

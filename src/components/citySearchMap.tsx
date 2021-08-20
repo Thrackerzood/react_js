@@ -29,7 +29,7 @@ function CitySearchMap(props:{props:IResponse}):JSX.Element {
    const previewPage = ():void =>{
       if(currentPage <= 1){
          setCurrentPage(previous => previous = 1)
-      
+
       }else{
          setCurrentPage(previous => previous - 1)
       }
@@ -58,7 +58,7 @@ function CitySearchMap(props:{props:IResponse}):JSX.Element {
       }
       result()
    }, [props.props.data, currentPage])
-   
+
    const {isLoaded, loadError} = useLoadScript({
       googleMapsApiKey: 'AIzaSyBdc0x4iD0GPspP6dSvw37ZadVsMKg8k8o',
       libraries: ['places'],
@@ -108,9 +108,9 @@ return (<><ul>
             //меняет позицию карты при смене lat / lng
             onLoad={onMapLoad}
             ></GoogleMap>
-            
+
          <div className="page">
-            
+
          {totalPage.length === 1 ? <></> : <button onClick={() => previewPage()}> назад </button>}
          {totalPage.length === 1 ? <></> : totalPage.map((number:number):JSX.Element => {
             return <button onClick={() => paginate(number)} key={number}>{number}</button>
@@ -122,5 +122,5 @@ return (<><ul>
          </>
       )
  }
- 
- export default CitySearchMap;
+
+ export default CitySearchMap; 

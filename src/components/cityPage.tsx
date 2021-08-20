@@ -19,7 +19,7 @@ function CityPage(props:{props: string}):JSX.Element {
    const [postsPerPage]
    :[number, Dispatch<SetStateAction<number>>] 
    = useState(5)
-   
+
 
    //вызов запроса сразу после захода
    useEffect(()=>{ 
@@ -49,7 +49,7 @@ function CityPage(props:{props: string}):JSX.Element {
    const previewPage = ():void =>{
       if(currentPage <= 1){
          setCurrentPage(previous => previous = 1)
-      
+
       }else{
          setCurrentPage(previous => previous - 1)
       }
@@ -75,10 +75,10 @@ function CityPage(props:{props: string}):JSX.Element {
                      </CityS>
                   })}
 
-                  
+
          <div className="page">
          {totalPage.length === 1 ? <></> :<button onClick={() => previewPage()}> назад </button>}
-         
+
          {totalPage.length === 1 ? <></> : totalPage.map((number:number):JSX.Element => {
             // при нажатии вызываем функцию пагинации и переходим на выбраную страницу
             return <button onClick={() => paginate(number)} key={number}>{number}</button>
@@ -88,7 +88,7 @@ function CityPage(props:{props: string}):JSX.Element {
          </ul>
       )
    }
-      
 
- 
- export default CityPage;
+
+
+ export default CityPage; 
