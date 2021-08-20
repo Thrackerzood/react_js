@@ -24,7 +24,7 @@ function CityPage(props:{props: string}):JSX.Element {
    //вызов запроса сразу после захода
    useEffect(()=>{ 
       const result = async () => {
-         let response:any = await ajax(`https://myapppliswork.herokuapp.com/api/allCountry/${props.props}`)
+         let response:any = await ajax(`https://sql-basedata.herokuapp.com/api/allCountry/${props.props}`)
          fetchLoad({data: response})
        }
       result()

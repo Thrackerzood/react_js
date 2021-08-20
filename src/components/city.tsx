@@ -9,7 +9,7 @@ import { CityS } from "../style/style";
 function City(props:{props: string}):JSX.Element {
    const [state, fetchLoad]= useState({data: {message: [{name_city: ""}]}})
    const result = async () => {
-     let response:any = await ajax(`https://myapppliswork.herokuapp.com/api/allCountry/${props.props}`)
+     let response:any = await ajax(`https://sql-basedata.herokuapp.com/api/allCountry/${props.props}`)
      fetchLoad({data: response})
    }
    useEffect(()=>{ result() }, [])
